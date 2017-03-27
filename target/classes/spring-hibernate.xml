@@ -50,7 +50,7 @@
 	</bean>
 	<!-- 配置hibernate的SessionFactory -->
 	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<!-- 注入数据源 相关信息看源码 -->
 		<property name="dataSource" ref="dataSource" />
 		<!-- hibernate配置信息 -->
@@ -98,7 +98,7 @@
 	<!-- 定义切面 -->
 	<aop:config>
 		<aop:pointcut id="serviceOperation"
-			expression="execution(* com.*.service.*Service.*(..))" />
+			expression="execution(* com.whitehorse.qingzhi.service.*Service.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
 	</aop:config>
 </beans>
