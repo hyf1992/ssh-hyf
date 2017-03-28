@@ -73,6 +73,10 @@
 		<!-- 扫描hibernate注解配置的entity -->
 		<property name="packagesToScan" value="com.whitehorse.qingzhi.entity" />
 	</bean>
+	<!-- hibernate模板 -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 	<!-- 扫描排除controller -->
 	<context:component-scan base-package="com.whitehorse.qingzhi">
 		<context:exclude-filter type="annotation"
