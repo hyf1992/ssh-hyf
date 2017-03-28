@@ -1,7 +1,6 @@
 package com.whitehorse.qingzhi.service;
 
 
-import com.whitehorse.qingzhi.entity.BaseService;
 import com.whitehorse.qingzhi.entity.User;
 
 
